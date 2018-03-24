@@ -131,7 +131,7 @@ public:
         pchMessageStart[1] = 0x0c;
         pchMessageStart[2] = 0x6b;
         pchMessageStart[3] = 0xbd;
-        vAlertPubKey = ParseHex("048240a8748a80a286b270ba126705ced4f2ce5a7847b3610ea3c06513150dade2a8512ed5ea86320824683fc0818f0ac019214973e677acd1244f6d0571fc5103");
+        vAlertPubKey = ParseHex("047176bff6848c0def05ce20ad726a6c211397aa6d4ca2c84202c78c513d66c95103361e815542cf9d847dfbc9d0cfb41fbcbdd719dd77e8db0eea09a4a93a4d14");
         nDefaultPort = 9847;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDelayGetHeadersTime = 24 * 60 * 60;
@@ -170,8 +170,8 @@ public:
 
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
-        strSporkPubKey = "04549ac134f694c0243f503e8c8a9a986f5de6610049c40b07816809b0d1d06a21b07be27b9bb555931773f62ba6cf35a25fd52f694d4e1106ccd237a7bb899fdd";
-
+        strSporkPubKey = "04bf055407727f833552c5dd36e4e33d889525b72c15a40bfe64eed1ddf766636ae0a4437f29c73820d27203db43c91dbe89f166a67571ad537c071c20afde7a6e";
+        
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (  100, uint256S("0x0000009a00edb2439df37b8c079a05ccce8218180b03b7f42410a1455eb2f42a"))
