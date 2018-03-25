@@ -135,3 +135,5 @@ make
 
 nbproject/
 
+.kdev4/
+pushi.kdev4
