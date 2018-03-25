@@ -172,7 +172,12 @@ unsigned int GetNextWorkRequiredBTC(const CBlockIndex* pindexLast, const CBlockH
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
     // Most recent algo first
-    if (pindexLast->nHeight + 1 >= params.nPowDGWHeight) {
+    if (pindexLast->nHeight + 1 == 28406)
+    {
+        const arith_uint256 bnTarget = UintToArith256(params.nMinimumChainWork);
+        return bnTarget.GetCompact();
+    }
+    else if (pindexLast->nHeight + 1 >= params.nPowDGWHeight) {
         return DarkGravityWave(pindexLast, params);
     }
     else if (pindexLast->nHeight + 1 >= params.nPowKGWHeight) {
